@@ -1,0 +1,115 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #640D5F;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    display: grid;
+    grid-template-areas: 
+      "header header"
+      "sidebar main";
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto 1fr;
+    width: 90%;
+    max-width: 1200px;
+    height: 90%;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  header {
+    grid-area: header;
+    background: #D91656;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  .sidebar {
+    grid-area: sidebar;
+    background: #ddd;
+    padding: 1rem;
+    border-right: 1px solid #ccc;
+  }
+  
+  .sidebar h2 {
+    margin-bottom: 1rem;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+  }
+  
+  .sidebar li {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    cursor: pointer;
+  }
+  
+  .sidebar li.active {
+    font-weight: bold;
+    color: #D91656;
+  }
+  
+  .sidebar button {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    background: #D91656;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  main {
+    grid-area: main;
+    padding: 1rem;
+  }
+  
+  main h2 {
+    margin-bottom: 1rem;
+  }
+  
+  #todo-list {
+    list-style: none;
+  }
+  
+  #todo-list li {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    background: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+  }
+  
+  button {
+    padding: 0.5rem 1rem;
+    background: #EB5B00;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background: #FFB200;
+  }
+  
+  /* Styling for completed tasks */
+.completed {
+    text-decoration: line-through;
+    color: #888;
+  }
+  

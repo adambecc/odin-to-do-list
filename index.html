@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Todo List</h1>
+    </header>
+    <aside class="sidebar">
+      <h2>Projects</h2>
+      <ul id="project-list">
+        <!-- Projects will be dynamically added here -->
+        <li class="project active">Default</li>
+      </ul>
+      <button id="add-project">+ Add Project</button>
+    </aside>
+    <main>
+      <section id="todos">
+        <h2 id="project-title">Default</h2>
+        <ul id="todo-list">
+          <!-- Todos will be dynamically added here -->
+        </ul>
+        <button id="add-todo">+ Add Todo</button>
+      </section>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
