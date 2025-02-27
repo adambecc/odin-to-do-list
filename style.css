@@ -1,115 +1,165 @@
 /* General Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #640D5F;
-    color: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  .container {
-    display: grid;
-    grid-template-areas: 
-      "header header"
-      "sidebar main";
-    grid-template-columns: 1fr 3fr;
-    grid-template-rows: auto 1fr;
-    width: 90%;
-    max-width: 1200px;
-    height: 90%;
-    background: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    overflow: hidden;
-  }
-  
-  header {
-    grid-area: header;
-    background: #D91656;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-  }
-  
-  .sidebar {
-    grid-area: sidebar;
-    background: #ddd;
-    padding: 1rem;
-    border-right: 1px solid #ccc;
-  }
-  
-  .sidebar h2 {
-    margin-bottom: 1rem;
-  }
-  
-  .sidebar ul {
-    list-style: none;
-  }
-  
-  .sidebar li {
-    margin: 0.5rem 0;
-    padding: 0.5rem;
-    cursor: pointer;
-  }
-  
-  .sidebar li.active {
-    font-weight: bold;
-    color: #D91656;
-  }
-  
-  .sidebar button {
-    margin-top: 1rem;
-    padding: 0.5rem;
-    background: #D91656;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  
-  main {
-    grid-area: main;
-    padding: 1rem;
-  }
-  
-  main h2 {
-    margin-bottom: 1rem;
-  }
-  
-  #todo-list {
-    list-style: none;
-  }
-  
-  #todo-list li {
-    margin: 0.5rem 0;
-    padding: 0.5rem;
-    background: #f9f9f9;
-    border: 1px solid #ccc;
-    border-radius: 30px;
-  }
-  
-  button {
-    padding: 0.5rem 1rem;
-    background: #EB5B00;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background: #FFB200;
-  }
-  
-  /* Styling for completed tasks */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1A1A19;
+  color: #1A1A19;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #FFFFFF;
+}
+
+.container {
+  display: grid;
+  grid-template-areas: 
+    "header header"
+    "sidebar main";
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: auto 1fr;
+  width: 90%;
+  max-width: 900px;
+  height: 90%;
+  background: #F6FCDF;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+header {
+  grid-area: header;
+  background: #859F3D;
+  color: #1A1A19;
+  text-align: center;
+  padding: 1rem;
+}
+
+header button {
+  margin-left: 1rem;
+  padding: 0.5rem;
+  background: #31511E;
+  color: #F6FCDF;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+header button:hover {
+  transform: scale(1.1);
+  background: #F6FCDF;
+  color: #31511E;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background: #31511E;
+  color: #F6FCDF;
+  padding: 1rem;
+  border-right: 1px solid #1A1A19;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.sidebar li:hover {
+  transform: scale(1.02);
+}
+
+.sidebar li.active {
+  font-weight: bold;
+  color: #859F3D;
+}
+
+.sidebar button {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  background: #859F3D;
+  color: #1A1A19;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+  border-radius: 20px;
+}
+
+.sidebar button:hover {
+  transform: scale(1.1);
+  background: #F6FCDF;
+}
+
+main {
+  grid-area: main;
+  padding: 1rem;
+}
+
+#todo-list {
+  list-style: none;
+}
+
+#todo-list li {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  background: #F6FCDF;
+  border: 1px solid #1A1A19;
+  border-radius: 30px;
+  transition: transform 0.3s ease;
+}
+
+#todo-list li:hover {
+  transform: scale(1.02);
+}
+
+button {
+  padding: 0.5rem 1rem;
+  background: #859F3D;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+  margin-top: 10px;
+  border-radius: 20px;
+}
+
+button:hover {
+  transform: scale(1.1);
+  background: #31511E;
+}
+
 .completed {
-    text-decoration: line-through;
-    color: #888;
-  }
-  
+  text-decoration: line-through;
+  color: #888;
+  transition: transform 0.3s ease;
+}
+
+.completed:hover {
+  transform: scale(1.1);
+}
+
+#search-todos{
+  margin-top: 5px;
+  border-radius: 15px;
+  padding: 5px;
+  border-color: #859F3D;
+  transition: transform 0.3s ease;
+}
+
+#search-todos:hover{
+  transform: scale(1.1);
+}
